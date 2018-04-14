@@ -18,7 +18,7 @@ module.exports = function (grunt) {
         unused: false,
         eqnull: true,
       },
-      '<%= pkg.name %>': {
+      files: {
         src: [ 'src/index.js']
       }
     },

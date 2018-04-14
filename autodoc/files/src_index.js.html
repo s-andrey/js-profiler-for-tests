@@ -80,10 +80,12 @@
 
 <div class="file">
     <pre class="code prettyprint linenums">
+  /*globals matrixForProfiler:false */
   var currentComputerFlops,
       beginTime,
       endTime;
 
+  /* jshint esnext: true */
   const profilerFunctions = {};
 
   /**
@@ -93,6 +95,7 @@
   * @type {Number}
   * @default 81513124.2547082
   */
+  /* jshint esnext: true */
   const referenceFlops = 81513124.2547082;
 
   /**
@@ -102,6 +105,7 @@
   * @type {Number}
   * @default 0.271247
   */
+  /* jshint esnext: true */
   const referenceTime = 0.271247;
 
   /**
@@ -186,7 +190,7 @@
   * @param {Boolean} reCount Recalculate flops
   */
   profilerFunctions.countFlops = function (reCount) {
-    if (!reCount &amp;&amp; (currentComputerFlops === undefined)) {
+    if (!reCount &amp;&amp; (currentComputerFlops !== undefined)) {
       return;
     }
 

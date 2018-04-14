@@ -1,7 +1,9 @@
+/*globals matrixForProfiler:false */
   var currentComputerFlops,
       beginTime,
       endTime;
 
+    /* jshint esnext: true */
   const profilerFunctions = {};
 
   /**
@@ -11,6 +13,7 @@
   * @type {Number}
   * @default 81513124.2547082
   */
+    /* jshint esnext: true */
   const referenceFlops = 81513124.2547082;
 
   /**
@@ -20,6 +23,7 @@
   * @type {Number}
   * @default 0.271247
   */
+  /* jshint esnext: true */
   const referenceTime = 0.271247;
 
   /**
@@ -104,7 +108,7 @@
   * @param {Boolean} reCount Recalculate flops
   */
   profilerFunctions.countFlops = function (reCount) {
-    if (!reCount && (currentComputerFlops === undefined)) {
+    if (!reCount && (currentComputerFlops !== undefined)) {
       return;
     }
 
@@ -127,7 +131,7 @@
         {
           var t = 0;
           for (var j = 0; j < rowsB; j++) {
-            t += matrixForProfiler[i][j]*matrixForProfiler[j][k];
+            t += matrixForProfiler[i][j] * matrixForProfiler[j][k];
           }
 
           matrixResult[i][k] = t;
