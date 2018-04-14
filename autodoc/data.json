@@ -1,0 +1,131 @@
+{
+    "project": {},
+    "files": {
+        "src\\index.js": {
+            "name": "src\\index.js",
+            "modules": {},
+            "classes": {
+                "profilerJS": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        }
+    },
+    "modules": {},
+    "classes": {
+        "profilerJS": {
+            "name": "profilerJS",
+            "shortname": "profilerJS",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "file": "src\\index.js",
+            "line": 1,
+            "description": "Provides a set of features for platform independent profiling javascript."
+        }
+    },
+    "elements": {},
+    "classitems": [
+        {
+            "file": "src\\index.js",
+            "line": 13,
+            "description": "Reference value of flops. (Platform independent method of profiling translates time to these flops).",
+            "itemtype": "property",
+            "name": "referenceFlops",
+            "type": "{Number}",
+            "default": "81513124.2547082",
+            "class": "profilerJS"
+        },
+        {
+            "file": "src\\index.js",
+            "line": 22,
+            "description": "Theoretical time for reference flops.",
+            "itemtype": "property",
+            "name": "referenceTime",
+            "type": "{Number}",
+            "default": "0.271247",
+            "class": "profilerJS"
+        },
+        {
+            "file": "src\\index.js",
+            "line": 31,
+            "description": "Add profilerJS as a global object.",
+            "class": "profilerJS"
+        },
+        {
+            "file": "src\\index.js",
+            "line": 39,
+            "description": "Writes the end begin for the function.",
+            "itemtype": "method",
+            "name": "profilerFunctions.begin",
+            "class": "profilerJS"
+        },
+        {
+            "file": "src\\index.js",
+            "line": 52,
+            "description": "Writes the end time for the function.",
+            "itemtype": "method",
+            "name": "profilerFunctions.end",
+            "class": "profilerJS"
+        },
+        {
+            "file": "src\\index.js",
+            "line": 65,
+            "description": "Calculates run time function.",
+            "itemtype": "method",
+            "name": "profilerFunctions.getCommonResult",
+            "return": {
+                "description": "run time function",
+                "type": "Number"
+            },
+            "class": "profilerJS"
+        },
+        {
+            "file": "src\\index.js",
+            "line": 75,
+            "description": "Calculates run time function and applies the method is platform independent profiling.",
+            "itemtype": "method",
+            "name": "profilerFunctions.getResult",
+            "return": {
+                "description": "Time-converted function",
+                "type": "Number"
+            },
+            "class": "profilerJS"
+        },
+        {
+            "file": "src\\index.js",
+            "line": 106,
+            "description": "Computes count flops for the current computer.",
+            "itemtype": "method",
+            "name": "profilerFunctions.countFlops",
+            "params": [
+                {
+                    "name": "reCount",
+                    "description": "Recalculate flops",
+                    "type": "Boolean"
+                }
+            ],
+            "class": "profilerJS"
+        },
+        {
+            "file": "src\\index.js",
+            "line": 149,
+            "description": "Returns count flops  for the current computer.",
+            "itemtype": "method",
+            "name": "profilerFunctions.getNumberFlops",
+            "return": {
+                "description": "Returns count flops  for the current computer",
+                "type": "Number"
+            },
+            "class": "profilerJS"
+        }
+    ],
+    "warnings": [
+        {
+            "message": "Missing item type\nAdd profilerJS as a global object.",
+            "line": " src\\index.js:31"
+        }
+    ]
+}
