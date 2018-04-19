@@ -7,7 +7,7 @@
   const profilerFunctions = {};
 
   /**
-  * Reference value of flops. (Platform independent method of profiling translates time to these flops).
+  * Reference value of flops. (Platform independent profiling method that converts time to these flops).
   *
   * @property referenceFlops
   * @type {Number}
@@ -35,7 +35,7 @@
   // ---------------------------------------
 
   /**
-  * Writes the end begin for the function.
+  * Writes the begin time of a function.
   *
   * @method profilerFunctions.begin
   */
@@ -48,7 +48,7 @@
   };
 
   /**
-  * Writes the end time for the function.
+  * Writes the end time of a function.
   *
   * @method profilerFunctions.end
   */
@@ -61,10 +61,10 @@
   };
 
   /**
-  * Calculates run time function.
+  * Calculates function's execution time.
   *
   * @method profilerFunctions.getCommonResult
-  * @return {Number} run time function
+  * @return {Number} Function's execution time
   */
   profilerFunctions.getCommonResult = function () {
     if (beginTime === undefined) {
@@ -78,15 +78,15 @@
     if (endTime < beginTime) {
       throw new Error('End time is larger than the start time');
     }
-    
+
     return endTime - beginTime;
   };
 
   /**
-  * Calculates run time function and applies the method is platform independent profiling.
+  * Calculates function's execution time and applies platform independent profiling method.
   *
   * @method profilerFunctions.getResult
-  * @return {Number} Time-converted function
+  * @return {Number} Converted time
   */
   profilerFunctions.getResult = function () {
     if (beginTime === undefined) {
@@ -114,10 +114,10 @@
   };
 
   /**
-  * Computes count flops for the current computer.
+  * Computes flops count for the current computer.
   *
   * @method profilerFunctions.countFlops
-  * @param {Boolean} reCount Recalculate flops
+  * @param {Boolean} reCount recalculate flops
   */
   profilerFunctions.countFlops = function (reCount) {
     if (!reCount && (currentComputerFlops !== undefined)) {
@@ -157,10 +157,10 @@
   };
 
   /**
-  * Returns count flops  for the current computer.
+  * Returns flops count for the current computer.
   *
   * @method profilerFunctions.getNumberFlops
-  * @return {Number} Returns count flops  for the current computer
+  * @return {Number} Returns flops count for the current computer
   */
   profilerFunctions.getNumberFlops = function () {
     if (currentComputerFlops === undefined) {
