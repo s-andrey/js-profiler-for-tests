@@ -67,6 +67,18 @@
   * @return {Number} run time function
   */
   profilerFunctions.getCommonResult = function () {
+    if (beginTime === undefined) {
+      throw new Error('Begin time is not defined');
+    }
+
+    if (endTime === undefined) {
+      throw new Error('End time is not defined');
+    }
+
+    if (endTime < beginTime) {
+      throw new Error('End time is larger than the start time');
+    }
+    
     return endTime - beginTime;
   };
 
@@ -151,5 +163,9 @@
   * @return {Number} Returns count flops  for the current computer
   */
   profilerFunctions.getNumberFlops = function () {
+    if (currentComputerFlops === undefined) {
+      profilerFunctions.countFlops();
+    }
+
     return currentComputerFlops;
   };
